@@ -1,0 +1,13 @@
+<%= link_to app_path(app), class: 'index_app_link', title: app.description do %>
+  <div class="index_app">
+    <div class="index_app_icon">
+      <% unless app.icon.blank? || app.icon.dirty? %>
+        <%= image_tag app.icon.url(:small), alt: '' %>
+      <% end %>
+    </div>
+    <div class="index_app_text">
+      <%= app.title %>
+      <% if app.featured %><span class="featured_star">&#x2605;</span><% end %>
+      <% if app.published %><span class="published_check">&#x2713;</span><% end %>
+    </div>
+  </div><% end %>

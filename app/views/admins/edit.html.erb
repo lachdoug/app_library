@@ -1,0 +1,21 @@
+<div class="page form">
+  <h3>Admin</h3>
+
+  <%= form_for(@user, url: admin_path) do |f| %>
+    <div class="field_group">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, required: true, autocomplete: "off", id: 'input_admin_password' %>
+    </div>
+
+    <div class="field_group">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, required: true, autocomplete: "off", id: 'input_admin_password_confirmation' %>
+    </div>
+
+    <div class="field_group">
+      <%= link_to 'Cancel', apps_path, class: :cancel %>
+      <%= f.submit "Update", class: 'submit' %>
+    </div>
+  <% end %>
+
+</div>

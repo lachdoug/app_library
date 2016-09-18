@@ -1,0 +1,12 @@
+<%= @apps.map do |app|
+    {
+    id: app.id,
+    featured: app.featured,
+    title: app.title,
+    description: app.description,
+    readme: app.readme,
+    website_url: app.website_url,
+    blueprint_url: app.blueprint_url,
+    icon_url_small: "#{request.protocol}#{request.host_with_port}#{app.icon.url(:small)}",
+    icon_url: "#{request.protocol}#{request.host_with_port}#{app.icon.url(:large)}" }
+end.to_json.html_safe %>

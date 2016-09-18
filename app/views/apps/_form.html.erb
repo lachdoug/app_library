@@ -1,0 +1,42 @@
+<%= form_for @app do |f| %>
+  <legend>Blueprint</legend>
+  <div class="field_group">
+    <%= f.text_field :blueprint_url, required: true, type: :url %>
+  </div>
+
+  <legend>App</legend>
+  <div class="field_group">
+    <%= f.label :title %><br>
+    <%= f.text_field :title, required: true %>
+  </div>
+  <div class="field_group">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field_group">
+    <%= f.label :icon %><br>
+    <%= f.file_field :icon %>
+  </div>
+  <div class="field_group">
+    <%= f.label :website_url, 'Website URL' %><br>
+    <%= f.text_field :website_url, type: :url %>
+  </div>
+  <legend>Readme</legend>
+  <div class="field_group">
+    <%= f.text_area :readme, placeholder: 'Markdown' %>
+  </div>
+  <legend>Status</legend>
+  <div class="field_group">
+    <%= f.check_box :featured %>
+    <%= f.label :featured %>
+  </div>
+  <div class="field_group">
+    <%= f.check_box :published %>
+    <%= f.label :published %>
+  </div>
+  <hr>
+  <div class="field_group">
+    <%= link_to 'Cancel', (@app.new_record? ? apps_path : app_path(@app)), class: :cancel %>
+    <%= f.submit class: :submit %>
+  </div>
+<% end %>

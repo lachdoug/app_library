@@ -1,0 +1,16 @@
+ div.form { width: 400px; }
+ hint { font-size: 14px; color: #666; display: none; }
+ legend { border-bottom: 1px solid #ccc; padding: 5px; }
+ .field_group { margin: 10px; }
+ input, select { margin-left: 10px; max-width: 244px; }
+ textarea { margin-left: 10px; width: 228px; }
+ input.submit { background-color: #337ab7; color: #fff; padding: 6px 12px; font-size: 16px; border: 1px solid #2e6da4; border-radius: 4px; }
+ input.submit:hover { background-color: #286090; border-color: #204d74; }
+ a.cancel { background-color: #f0ad4e; color: #fff; text-decoration: none; padding: 7px 12px; font-size: 16px; border: 1px solid #eea236; border-radius: 4px; }
+ a.cancel:hover { background-color: #ec971f; border-color: #d58512; }
+
+ .error h4 { color: #966; padding: 10px; }
+ .success h4 { color: #696; padding: 10px; }
+
+ .field_with_errors input { box-shadow: 0px 0px 5px #966; }
+ div.field_with_errors { display: inline-block; }

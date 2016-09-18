@@ -1,0 +1,27 @@
+<div class="page"%>
+<div class="app">
+  <div class="app_actions">
+    <%= link_to "&#x2190; Back to apps".html_safe, apps_path, class: 'button' %>
+    <%= link_to "&#x2710; Edit".html_safe, edit_app_path(@app), class: 'button' %>
+    <%= link_to "&#x2716; Delete".html_safe, app_path(@app), method: :delete, class: "button", data: {confirm: "Are you sure that you want to delete #{@app.title}?"}  %>
+  </div>
+  <div class="app_icon">
+    <% unless @app.icon.blank? || @app.icon.dirty? %>
+      <%= image_tag @app.icon.url(:small), alt: '' %>
+    <% end %>
+  </div>
+  <div class="app_title_text">
+    <h3 class="app_title"><%= @app.title %></h3>
+    <%= @app.description %><br>
+    <% if @app.featured %><span class="featured_star">&#x2605; Featured</span><% end %>
+    <% if @app.published %><span class="published_check">&#x2713; Published</span><% end %>
+  </div>
+  <div class="app_detail_text">
+    Blueprint: <%= link_to @app.blueprint_url, @app.blueprint_url, target: '_blank' %>
+    <% if @app.website_url.present? %>
+      <br>Website: <%= link_to @app.website_url, @app.website_url, target: '_blank' %>
+    <% end %>
+    <%= markdown_text @app.readme %>
+  </div>
+</div>
+</div>
