@@ -10,7 +10,7 @@ class AdminsController < ApplicationController
   def update
     @user = current_user
     respond_to do |format|
-      if valid_password?(strong_params[:current_password]) && @user.update(strong_params)
+      if @user.valid_password?(strong_params[:current_password]) && @user.update(strong_params.to_h.without('current_password'))
         format.html { redirect_to apps_path, notice: "Successfully updated admin password."}
       else
         format.html { render :edit }

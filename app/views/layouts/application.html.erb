@@ -6,17 +6,17 @@
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-<body style="background-color: <%= Rails.application.config.background_color %>;">
+<body style="color: <%= Rails.application.config.text_color %>; background-color: <%= Rails.application.config.background_color %>;">
 <% if current_user %>
 <div class="navbar clearfix">
   <div class="navbar_brand">
     <%= Rails.application.config.application_title %>
   </div>
   <div class="navbar_right">
-  <%= link_to "&#x270B; Password".html_safe,
+  <%= link_to "Password".html_safe,
       edit_admin_path,
       class: 'button' %>
-    <%=	link_to "&#x2716; Sign out".html_safe,
+    <%=	link_to "Sign out".html_safe,
     	destroy_user_session_path,
       title: 'Sign out', class: 'button',
     	method: :delete %>

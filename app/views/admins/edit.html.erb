@@ -1,15 +1,17 @@
 <div class="page form">
-  <h3>Admin</h3>
+  <h3>Change admin password</h3>
 
   <%= form_for(@user, url: admin_path) do |f| %>
+
     <div class="field_group">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, required: true, autocomplete: "off", id: 'input_admin_password' %>
+      <%= f.label :password, 'Current password' %><br />
+      <%= f.password_field :current_password, required: true, autocomplete: "off", id: 'input_admin_password' %>
     </div>
 
     <div class="field_group">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, required: true, autocomplete: "off", id: 'input_admin_password_confirmation' %>
+      <%= f.label :password, 'New password' %><br />
+      <%= f.password_field :password, required: true, autocomplete: "off", id: 'input_admin_password' %>
+      <%= f.password_field :password_confirmation, required: true, autocomplete: "off", id: 'input_admin_password_confirmation', label: false, placeholder: 'Confirm new password' %>
     </div>
 
     <div class="field_group">

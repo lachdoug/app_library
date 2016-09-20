@@ -21,6 +21,7 @@ module Library
 
     config.application_title = ENV['APPLICATION_TITLE'] || "Engines Library"
     config.background_color = ENV['BACKGROUND_COLOR'] || "#48d"
+    config.text_color = ENV['TEXT_COLOR'] || "#fff"
 
   end
 end
