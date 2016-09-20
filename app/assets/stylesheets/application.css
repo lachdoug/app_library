@@ -34,9 +34,9 @@ div.app_detail_text { }
 div.app_actions { display: inline-block; float: right; }
 
 div.index_apps { padding: 10px; }
-div.index_app { width: 100px; height: 120px; overflow: hidden; word-break: ; font-size: 0.9em; }
+div.index_app { width: 100px; height: 120px; overflow: hidden; font-size: 0.9em; }
 div.index_app_icon { height: 68px; }
-div.index_app_text { word-break: break-all; }
+div.index_app_text { }
 a.index_app_link:hover { background-color: #eee; }
 a.index_app_link { vertical-align: top; text-decoration: none; color: #666; display: inline-block; width: 100px; height: 120px; text-align: center; padding: 10px; border-radius: 6px; }
 .featured_star { color: #fc0; }
