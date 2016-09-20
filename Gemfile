@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rake'
-
 gem 'devise'
 gem 'paperclip'
 gem 'redcarpet'
 gem 'rack-cors', :require => 'rack/cors'
+
+group :production, :test do
+  gem 'mysql2'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
