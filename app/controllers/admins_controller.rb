@@ -17,7 +17,7 @@ class AdminsController < ApplicationController
           format.html { render :edit }
         end
       else
-        format.html { render :edit, notice: "Incorrect current password." }
+        format.html { redirect_to edit_admin_path, alert: "Incorrect current password." }
       end
     end
   end

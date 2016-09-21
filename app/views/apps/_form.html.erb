@@ -1,10 +1,8 @@
 <%= form_for @app do |f| %>
-  <legend>Blueprint</legend>
   <div class="field_group">
+    <%= f.label :blueprint_url, 'Blueprint URL' %><br>
     <%= f.text_field :blueprint_url, required: true, type: :url, class: 'wide_field' %>
   </div>
-
-  <legend>App</legend>
   <div class="field_group">
     <%= f.label :title %><br>
     <%= f.text_field :title, required: true, class: 'wide_field' %>
@@ -18,11 +16,11 @@
     <%= f.file_field :icon %>
   </div>
   <div class="field_group">
-    <%= f.label :website_url, 'Website URL' %><br>
+    <%= f.label :website_url, 'Website' %><br>
     <%= f.text_field :website_url, type: :url, class: 'wide_field' %>
   </div>
-  <legend>Readme</legend>
   <div class="field_group">
+    <%= f.label :readme %><br>
     <%= f.text_area :readme, placeholder: 'Markdown', class: 'wide_field' %>
   </div>
   <legend>Status</legend>

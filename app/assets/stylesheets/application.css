@@ -47,3 +47,5 @@ a.index_app_link { vertical-align: top; text-decoration: none; color: #666; disp
 .navbar .button { color: #fff; }
 .navbar .button:hover { color: #ccc; }
 .navbar .navbar_brand { float:left; color: #fff; padding: 7px; font-size: 1.2em; }
+
+hr { background-color: #ccc; height: 1px; border: 0; }

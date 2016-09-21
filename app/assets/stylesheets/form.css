@@ -1,11 +1,36 @@
- div.form { width: 400px; }
+ div.form { width: 300px; }
  div.wide_form { width: 600px; }
  hint { font-size: 14px; color: #666; display: none; }
  legend { border-bottom: 1px solid #ccc; padding: 5px; }
  .field_group { margin: 10px; }
+ input[type='url'], input[type='text'], input[type='password'], textarea {
+   display: block;
+   width: 240px;
+   height: 34px;
+   padding: 6px 12px;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #555555;
+   background-color: #fff;
+   background-image: none;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  }
+ input[type='url']:focus, input[type='text']:focus, input[type='password']:focus, textarea:focus {
+   border-color: #66afe9;
+   outline: 0;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+ }
+ input[type='url'], input[type='text'], input[type='password'] { height: 24px; }
  input.wide_field {width: 540px; }
- input, select { margin-left: 10px }
- textarea { margin-left: 10px; width: 540px; height: 200px; }
+ /*input, select { margin-left: 10px }*/
+ textarea.wide_field { width: 540px; height: 200px; }
  input.submit { background-color: #337ab7; color: #fff; padding: 6px 12px; font-size: 16px; border: 1px solid #2e6da4; border-radius: 4px; }
  input.submit:hover { background-color: #286090; border-color: #204d74; }
  a.cancel { background-color: #f0ad4e; color: #fff; text-decoration: none; padding: 7px 12px; font-size: 16px; border: 1px solid #eea236; border-radius: 4px; }
