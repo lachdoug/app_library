@@ -21,6 +21,7 @@
     <% if @app.website_url.present? %>
       <br>Website: <%= link_to @app.website_url, @app.website_url, target: '_blank' %>
     <% end %>
+    <hr>
     <%= markdown_text @app.readme %>
   </div>
 </div>

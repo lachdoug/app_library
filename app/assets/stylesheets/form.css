@@ -1,9 +1,11 @@
  div.form { width: 400px; }
+ div.wide_form { width: 600px; }
  hint { font-size: 14px; color: #666; display: none; }
  legend { border-bottom: 1px solid #ccc; padding: 5px; }
  .field_group { margin: 10px; }
- input, select { margin-left: 10px; max-width: 244px; }
- textarea { margin-left: 10px; width: 228px; }
+ input.wide_field {width: 540px; }
+ input, select { margin-left: 10px }
+ textarea { margin-left: 10px; width: 540px; height: 200px; }
  input.submit { background-color: #337ab7; color: #fff; padding: 6px 12px; font-size: 16px; border: 1px solid #2e6da4; border-radius: 4px; }
  input.submit:hover { background-color: #286090; border-color: #204d74; }
  a.cancel { background-color: #f0ad4e; color: #fff; text-decoration: none; padding: 7px 12px; font-size: 16px; border: 1px solid #eea236; border-radius: 4px; }
