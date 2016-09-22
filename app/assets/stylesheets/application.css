@@ -28,8 +28,8 @@ div.alert { color: #a94442; }
 
 div.app { padding: 20px; }
 div.app_icon { display: inline-block; height: 68px; }
-div.app_title_text { display: inline-block; vertical-align: top; }
-h3.app_title { margin: 0px; }
+div.app_label_text { display: inline-block; vertical-align: top; }
+h3.app_label { margin: 0px; }
 div.app_detail_text { }
 div.app_actions { display: inline-block; float: right; }
 

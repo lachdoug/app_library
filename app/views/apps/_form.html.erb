@@ -4,24 +4,29 @@
     <%= f.text_field :blueprint_url, required: true, type: :url, class: 'wide_field' %>
   </div>
   <div class="field_group">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, required: true, class: 'wide_field' %>
+    <%= f.label :label %><br>
+    <%= f.text_field :label, required: true %>
+    <hint>Human name.</hint>
   </div>
   <div class="field_group">
     <%= f.label :description %><br>
     <%= f.text_field :description, class: 'wide_field' %>
+    <hint>Very brief summary of the app's purpose.</hint>
   </div>
   <div class="field_group">
     <%= f.label :icon %><br>
     <%= f.file_field :icon %>
+    <hint>Should be square and at least 256px x 256px in size.</hint>
   </div>
   <div class="field_group">
     <%= f.label :website_url, 'Website' %><br>
     <%= f.text_field :website_url, type: :url, class: 'wide_field' %>
+    <hint>URL for external homepage for the app.</hint>
   </div>
   <div class="field_group">
     <%= f.label :readme %><br>
     <%= f.text_area :readme, placeholder: 'Markdown', class: 'wide_field' %>
+    <hint>Details of the app and its features.</hint>
   </div>
   <legend>Status</legend>
   <div class="field_group">

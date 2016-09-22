@@ -27,6 +27,7 @@ class AppsController < ApplicationController
       if @app.save
         format.html { redirect_to apps_path, notice: "Successfully created app."}
       else
+        flash[:alert] = @app.errors.full_messages.join('<br>').html_safe
         format.html { render :new }
       end
     end
@@ -45,6 +46,7 @@ class AppsController < ApplicationController
       if @app.update(strong_params)
         format.html { redirect_to apps_path, notice: "Successfully updated app."}
       else
+        flash[:alert] = @app.errors.full_messages.join('<br>').html_safe
         format.html { render :edit }
       end
     end
@@ -66,7 +68,8 @@ class AppsController < ApplicationController
   def strong_params
     params.require(:app).permit(
       :blueprint_url,
-      :title,
+      :label,
+      # :name,
       :icon,
       :description,
       :readme,

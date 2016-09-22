@@ -1,9 +1,13 @@
  div.form { width: 300px; }
  div.wide_form { width: 600px; }
  hint { font-size: 14px; color: #666; display: none; }
+ #toggle_hints { float: right; margin: 10px; padding: 8px; color: #aaa; background-color: #fff; border: 1px solid #ccc; border-radius: 18px; height: 35px; width: 35px; }
+ #toggle_hints:hover { cursor: pointer; }
+
  legend { border-bottom: 1px solid #ccc; padding: 5px; }
  .field_group { margin: 10px; }
  input[type='url'], input[type='text'], input[type='password'], textarea {
+   margin-bottom: 1px;
    display: block;
    width: 240px;
    height: 34px;

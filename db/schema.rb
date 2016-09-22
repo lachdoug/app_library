@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160709231800) do
+ActiveRecord::Schema.define(version: 20160921200306) do
 
   create_table "apps", force: :cascade do |t|
-    t.string   "title"
+    t.string   "label"
     t.string   "description"
     t.text     "readme"
     t.text     "website_url"

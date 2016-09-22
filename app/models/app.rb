@@ -8,9 +8,10 @@ class App < ApplicationRecord
   validates_attachment_content_type :icon, :content_type => /\Aimage\/.*\Z/
 
   validates :blueprint_url, presence: true
-  validates :title, presence: true
+  validates :label, presence: true
+  # validates :name, presence: true #, uniqueness: true
 
-  default_scope { order('title ASC') }
+  default_scope { order('label ASC') }
   scope :published, -> { where(published: true) }
   scope :unpublished, -> { !published }
 
