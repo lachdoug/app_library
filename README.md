@@ -12,7 +12,16 @@ GET /api/v0/apps - list published apps
 GET /api/v0/unpublished_apps - list unpublished apps
 
 Apps listed in array of hashes.
-Keys "id", "featured", "title", "description", "readme", "website_url", "blueprint_url", "icon_url_small", "icon_url".
+App has keys:
+  :id - library app record id
+  :featured - true of app warrants specific attention, e.g. is a flagship title for the library. (To allow engines website to identify apps for home page.)
+  :label
+  :description
+  :readme
+  :website_url
+  :blueprint_url
+  :icon_url_small - 64x64 icon (used by engines library)
+  :icon_url - 256x256 icon (used by mgmt gui)
 
 Seed
 ----
@@ -31,4 +40,7 @@ ENV['APPLICATION_TITLE']
 default is "Engines Library"
 
 ENV['BACKGROUND_COLOR']
-default is "#48d"
+default is "#fff"
+
+ENV['TEXT_COLOR']
+default is "#333"
