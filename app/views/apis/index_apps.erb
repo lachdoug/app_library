@@ -9,7 +9,7 @@
         readme: app.readme,
         website_url: app.website_url,
         blueprint_url: app.blueprint_url,
-        icon_url_small: "#{request.protocol}#{request.host_with_port}#{app.icon.url(:small)}",
-        icon_url: "#{request.protocol}#{request.host_with_port}#{app.icon.url(:large)}" }
+        icon_url_small: ( "#{request.protocol}#{request.host_with_port}#{app.icon.url(:small)}" if app.icon.present? ),
+        icon_url: ( "#{request.protocol}#{request.host_with_port}#{app.icon.url(:large)}" if app.icon.present? ) }
       end }.to_json.html_safe
 %>

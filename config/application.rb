@@ -20,8 +20,8 @@ module Library
     end
 
     config.application_title = ENV['APPLICATION_TITLE'] || "Engines Library"
-    config.background_color = ENV['BACKGROUND_COLOR'] || "#48d"
-    config.text_color = ENV['TEXT_COLOR'] || "#fff"
+    config.background_color = ENV['BACKGROUND_COLOR'] || "#fff"
+    config.text_color = ENV['TEXT_COLOR'] || "#333"
 
   end
 end

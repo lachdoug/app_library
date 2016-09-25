@@ -10,7 +10,7 @@
 <% if current_user %>
 <div class="navbar clearfix">
   <div class="navbar_brand">
-    <%= Rails.application.config.application_title %>
+    <a href="/"><%= Rails.application.config.application_title %></a>
   </div>
   <div class="navbar_right">
   <%= link_to "Password".html_safe,
