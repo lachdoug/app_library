@@ -3,6 +3,7 @@
 <head>
 <title><%= Rails.application.config.application_title %></title>
 <%= csrf_meta_tags %>
+<%= render 'layouts/favicon' %>
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
@@ -10,7 +11,7 @@
 <% if current_user %>
 <div class="navbar clearfix">
   <div class="navbar_brand">
-    <a href="/"><%= Rails.application.config.application_title %></a>
+    <a href="/"><%= image_tag 'engines_nut_plus_logo_128.png' %><%= Rails.application.config.application_title %></a>
   </div>
   <div class="navbar_right">
   <%= link_to "Password".html_safe,

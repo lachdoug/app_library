@@ -7,6 +7,10 @@ gem 'paperclip'
 gem 'redcarpet'
 gem 'rack-cors', :require => 'rack/cors'
 
+group :development do
+  gem 'rails_real_favicon'
+end
+
 group :production, :test do
   gem 'mysql2'
 end
